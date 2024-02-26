@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para poder cargar las hojas de estilo, debemos escribir en mi servidor (index.js) el código que se necesita para que todo lo que esté adentro de la carpeta public se pueda acceder como archivos estáticos (osea que se sirven así tal cual como están sin ninguna modificación)  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../public/style.css">    
+    <script src="login.js" defer></script><!--Archivos estáticos-->
+    <title>Iniciar sesión</title>
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h1>Iniciar Sesión</h1>
+            <p>Usuario y Contraseña para ingresar al área de administración</p>
+            <form id="login-form">
+                <label for="name" class="sr-only">User</label>
+                <input type="text" name="name" id="name" placeholder="Nombre de usuario" required>
+                <label for="contraseña" class="sr-only">Password</label>
+                <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+                <p class="error escondido">Usuario o Contraseña incorrectos</p>
+            </form>
+            <p>¿Todavía no tienes una cuenta? - <a href="/register">Registrar</a></p>
+        </div>
+    </main>
+</body>
+</html>
