@@ -1,21 +1,1309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Para poder cargar las hojas de estilo, debemos escribir en mi servidor (index.js) el código que se necesita para que todo lo que esté adentro de la carpeta public se pueda acceder como archivos estáticos (osea que se sirven así tal cual como están sin ninguna modificación)  -->
-    <link rel="stylesheet" href="style.css">
-    <script src="admin.js" defer></script>
-    <title>Admin</title>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">  
+
+  <title>VirtualVet</title>
+  <meta content="" name="VirtualVet">
+  <meta content="" name="Veterinario en casa">
+  <meta content="" name="veterinario domicilio medellín">
+  <meta content="" name="veterinario domicilio bogotá">
+  <meta content="" name="veterinario domicilio cali">
+
+  <!-- Favicons -->
+  <link rel="stylesheet" href="../assets/img/navicon.png.png" rel="icon" style="border-radius: 20px;">  
+  <link href="../assets/img/Logo VirtualVet1.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="../public/homepage.css">    
+  <script src="homepage.js" defer></script><!--Archivos estáticos-->
+  <script src="admin.js" defer></script>
+  
 </head>
+
 <body>
-    <main>
-        <div class="form-container">
-            <h1>Bienvenido al área de administración</h1>
-            <button>Cerrar sesión</button>
-            
+  
+  <!-- ======= Top Bar =======  -->
+  <div class="d-flex align-items-center fixed-top" id="topbar">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <!-- <i class="bi bi-envelope"></i> <a href="mailto:virtualvet@gmail.com">virtualvet@gmail.com</a> -->
+        <i class="bi bi-phone"></i> +57 3226464344
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
+        <a href="https://web.facebook.com/profile.php?id=100078608133297" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/veterinario__virtual/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
+        <a href="https://wa.me/573226464344" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">VirtualVet</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/Logo VirtualVet1.svg" alt=""></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">        
+        <ul>          
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#why-us">Acerca de</a></li>
+          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#departments">Especialidades</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#doctors">Médicos</a></li> -->
+          <li><a class="nav-link scrollto" href="#faq">Preguntas frecuentes</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Opiniones</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#gallery">Memorias</a></li> -->
+
+          
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+          <li><a class="nav-link scrollto" href="#suscribete">Suscríbete</a></li>
+          <li><a href="#appointment" class="nav-link scrollto" id="btn-navCita">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" width="40" viewBox="0 0 640 512">
+              <path fill="#ffffff" d="M0 48C0 21.5 21.5 0 48 0H368c26.5 0 48 21.5 48 48V96h50.7c17 0 33.3 6.7 45.3 18.7L589.3 192c12 12 18.7 28.3 18.7 45.3V256v32 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H576c0 53-43 96-96 96s-96-43-96-96H256c0 53-43 96-96 96s-96-43-96-96H48c-26.5 0-48-21.5-48-48V48zM416 256H544V237.3L466.7 160H416v96zM160 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm368-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM176 80v48l-48 0c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V192h48c8.8 0 16-7.2 16-16V144c0-8.8-7.2-16-16-16H240V80c0-8.8-7.2-16-16-16H192c-8.8 0-16 7.2-16 16z"/>
+            </svg>
+            <span>Agendar Cita</span>
+          </a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+       <!-- Para poder cargar las hojas de estilo, debemos escribir en mi servidor (index.js) el código que se necesita para que todo lo que esté adentro de la carpeta public se pueda acceder como archivos estáticos (osea que se sirven así tal cual como están sin ninguna modificación)  -->
+      <button>Cerrar sesión</button>
+
+      <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Agendar Cita</a>
+
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Bienvenido a VirtualVet</h1> 
+      <h2> Servicios Veterinarios a Domicilio</h2>
+        <div class="box"> 
+          <p><strong>En VirtualVet nos dedicamos a proporcionar servicios veterinarios de alta calidad en la comodidad de tu hogar. Nuestro experimentado equipo de veterinarios está comprometido a brindar atención personalizada y compasiva a tus mascotas, eliminando las molestias y el estrés asociados con las visitas a la clínica.</strong></p>
+          <p><strong>Nuestro equipo de veterinarios altamente calificados se enorgullece de brindar servicios personalizados en la comodidad de tu hogar. Ya sea una revisión de rutina, vacunas, tratamiento para enfermedades o simplemente para tranquilizar a tu mascota nerviosa, estamos aquí para cuidar de ellos como si fueran parte de nuestra propia familia.</strong></p>
+        </div>   
+        <a href="/" class="btn-get-started scrollto">Ingresar</a> 
+    </div>    
+  </section><!-- End Hero -->
+  <section class="seccionWhatsapp">
+  <div class="baseWhatsapp"><a href="https://wa.me/573226464344" target="_blank"><p class="contactwsp">Contáctanos</p></a>
+    <div><a href="https://wa.me/573226464344" class="whatsapp1" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #ffffff;"></i></a></div>
+  </div>
+</section>
+
+  <main id="main">
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Porque elegir VirtualVet?</h3>
+              <ul>
+                <li>Atención personalizada: Cada mascota es única, y adaptamos nuestros servicios a sus necesidades individuales.</li>
+                <li>Comodidad a tu puerta: Olvídate del estrés de llevar a tu mascota a la clínica. Nosotros venimos a ti, eliminando la incomodidad y el tiempo perdido.</li>
+                <li>Equipo comprometido: Nuestros veterinarios están dedicados a proporcionar el más alto nivel de atención y a construir relaciones duraderas contigo y tus mascotas.</li>
+              </ul>
+              <div class="text-center">
+                <a href="#services" class="more-btn">Leer mas <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row" id="mvv">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Misión</h4>
+                    <p>Brindar atención veterinaria excepcional y personalizada a las mascotas, mejorando su calidad de vida y fortaleciendo el vínculo entre los dueños y sus compañeros peludos. Nos esforzamos por hacer que el cuidado de las mascotas sea accesible y conveniente, llevando nuestros servicios profesionales a la puerta de tu hogar.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Visión</h4>
+                    <p>Ser la principal elección para servicios veterinarios a domicilio, reconocidos por nuestro compromiso inquebrantable con la salud y felicidad de las mascotas. Aspiramos a crear una comunidad donde la atención veterinaria sea percibida no solo como una necesidad, sino como una experiencia positiva y personalizada que fortalece los lazos entre las familias y sus animales.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Valores</h4>
+                    <ol>
+                      <li><strong>Compasión:</strong> 
+                        Nos importa profundamente el bienestar de cada animal y nos esforzamos por brindar cuidado con empatía y compasión.</li>
+                      <li><strong>Profesionalismo:</strong>
+                        Cumplimos con los más altos estándares de excelencia profesional en cada servicio que ofrecemos, manteniendo la integridad y la ética en todo momento.</li>
+                      <li><strong>Accesibilidad:</strong>
+                        Creemos que todos los dueños de mascotas merecen acceso fácil y conveniente a servicios veterinarios de calidad. Trabajamos para eliminar barreras y hacer que el cuidado de las mascotas sea más accesible.</li>
+                      <li><strong>Colaboración:</strong>
+                        Valoramos la colaboración y trabajamos estrechamente con los dueños de mascotas para ofrecer soluciones personalizadas y adaptadas a las necesidades individuales de cada animal.</li>
+                      <li><strong>Innovación:</strong>
+                        Buscamos constantemente formas nuevas y efectivas de mejorar nuestros servicios y adoptamos tecnologías modernas para garantizar un cuidado veterinario de vanguardia.</li>
+                      <li><strong>Educación:</strong>
+                        Nos comprometemos a proporcionar información educativa que empodere a los dueños de mascotas para cuidar mejor de sus animales en casa y tomar decisiones informadas sobre su salud.</li>                      
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
         </div>
-    </main>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="https://youtu.be/18eM2aU-Swg" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Cuidado a Tu Puerta, Amor en Cada Visita</h3>
+            <p>Porque creemos que cada mascota merece cuidado con amor, y eso es exactamente lo que llevamos a tu puerta en cada visita.</p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-heart"></i></div>
+              <h4 class="title">Donde la Comodidad se Encuentra con el Cuidado</h4>
+              <p class="description">En el cruce entre la comodidad y el cuidado, encontramos la manera perfecta de hacer que la salud de tus mascotas sea accesible y agradable</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-home"></i></div>
+              <h4 class="title">Veterinaria en Casa, Felicidad en Tu Hogar</h4>
+              <p class="description">Donde la veterinaria llega a casa, la felicidad se instala. Porque sabemos que un hogar lleno de mascotas saludables es un hogar feliz</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-clinic"></i></div>
+              <h4 class="title">Tu Mascota, Nuestro Compromiso, Tu Hogar, Nuestra Clínica</h4>
+              <p class="description">Nos comprometemos a llevar la calidad de la clínica directamente a tu hogar, porque cada mascota merece la atención de una clínica, y tú mereces la comodidad de tu hogar</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class="fas fa-user-md"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Médicos</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="far fa-hospital"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Especialidades</p>
+            </div>
+          </div> 
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-flask"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Laboratorios Diagnóstico</p>
+            </div>
+          </div> 
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0"> 
+            <div class="count-box">
+              <i class="fas fa-hospital-user"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Auxiliares</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fa-solid fa-scissors" style="color: #fff"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Peluqueros Caninos</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fa-solid fa-person-walking-with-cane" style="color: #ffffff;"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Paseador Canino</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Servicios</h2>
+          <h3>¡Novedades en Nuestros Servicios!</h3>
+          <p>Para ofrecerte una experiencia aún más completa, hemos expandido nuestros servicios para incluir profesionales altamente calificados en áreas adicionales</p>
+        </div>      
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">              
+              <h4>Consulta Veterinaria a Domicilio</h4>
+              <p class="front">Nuestro equipo de veterinarios altamente calificados ofrece revisiones completas y consultas a domicilio</p>
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <div class="icon"><i class="fa-solid fa-user-doctor fa-beat" style="color: #ffffff;"></i></div>                      
+                    </div>
+                    
+                    <div class="card-back">
+                      <ul>
+                        <li>Revisiones y consultas a domicilio</li>
+                        <li>Vacunación y prevención</li>
+                        <li>Tratamientos médicos</li>
+                        <li>Hospitalización en casa</li>
+                        <li>Laboratorio y diagnóstico</li>
+                        <li>Cirugía menor</li>
+                                                
+                        <!-- <ul><em>Especialidades</em>
+                          <li>Cardiología</li>
+                          <li>Neurología</li>
+                          <li>Oftalmología</li>
+                          <li>Nefrología</li>
+                          <li>Imaginología</li>
+                          <li>Ortopedia</li>
+                        </ul> -->
+                        
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">              
+              <h4>Servicio de Auxiliares Veterinarios</h4>
+              <p class="front">Además de Veterinarios, contamos con Auxiliares capacitados para brindar apoyo en diversas áreas</p>
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <div class="icon"><i class="fa-solid fa-user-nurse fa-beat" style="color: #ffffff;"></i></div>
+                    </div>
+                    <div class="card-back">
+                      <ul>
+                        <li>Retiro de puntos quirúrgicos</li>
+                        <li>Cuidados postoperatorios</li>
+                        <li>Limpieza y desinfección de heridas</li>
+                        <li>Limpieza y desinfección de oídos</li>
+                        <li>Administración de medicamentos</li>
+                        <li>Toma de muestras para laboratorio</li>                      
+                        <li>Mucho más</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">              
+              <h4>Peluquería Canina y Felina Profesional</h4>
+              <p class="front">Ofrecemos servicios de baño y peluquería canina para mantener a tus mascotas con un aspecto impecable.</p>
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <div class="icon"><i class="fa-solid fa-scissors fa-beat" style="color: #ffffff;"></i></div>
+                    </div>
+                    <div class="card-back">
+                      <ul>
+                        <li>Baño/Peluquería/Deslanado</li>
+                        <li>Baño medicado</li>                        
+                        <li>Corte de uñas</li>
+                        <li>Corte higiénico</li>                                            
+                        <li>Mucho más</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">              
+              <h4>Paseos divertidos y saludables</h4>
+              <p class="front">Nuestros paseadores caninos expertos se aseguran de que tus perros obtengan el ejercicio y la estimulación mental</p>
+                <div class="card" id="cardPaseador">
+                  <div class="card-inner">
+                    <div class="card-front">
+                      <div class="icon"><i class="fa-solid fa-shield-dog fa-beat" style="color: #ffffff;"></i></div>
+                    </div>
+                    <div class="card-back">
+                      <ul>
+                        <li>Paseo</li>
+                        <li>Juego interactivo</li>                        
+                        <li>Visita a parque</li>
+                        <li>Guardería</li>                                            
+                        <li>Supervisión y compañía</li>
+                        <li>Entrenamiento</li>
+                        <li>Mucho más</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>   
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pedir una cita</h2>
+          <p>Puede separar su cita llenando el siguiente formulario o si lo desea a través de nuestro Whatsapp</p><a href="https://wa.me/573226464344" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" id="citaWhatsapp" style="color: #00ff00;"></i></a>          
+        </div>
+
+        <form action="https://formsubmit.co/f20b23daa80c2760a7b74656a054d79d" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nombre y Apellido" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Teléfono" pattern="[0-9]*" data-rule="minlen:4" data-msg="Por favor, ingresa al menos 10 caracteres numéricos" required>
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">              
+              <input type="datetime-local" name="appointment date" class="form-control datepicker" id="date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" placeholder="Selecciona una fecha">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="appointment type" class="form-select" id="tipoCita">
+                <optgroup label="Cita General">
+                  <option value="Consulta Veterinaria">Consulta Veterinaria</option>  
+                  <option value="Auxiliar Veterinario">Auxiliar Veterinario</option> 
+                  <option value="Baño y Peluquería">Baño y Peluquería</option>   
+                  <option value="Paseador Canino">Paseador Canino</option>                 
+                </optgroup>                
+                <!-- <optgroup label="Especialista Veterinario">
+                  <option value="Cardiología">Cardiología</option>  
+                  <option value="Neurología">Neurología</option>
+                  <option value="Nefrología">Nefrología</option>
+                  <option value="Oftalmología">Oftalmología</option>
+                  <option value="Ortopedia">Ortopedia</option>                  
+                </optgroup>                 -->
+              </select>                                                         
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <input type="text" name="address" id="direccion" class="form-control" placeholder="Ciudad-Barrio-Dirección" required data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="10" placeholder="Mensaje (Opcional)"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="text-center"><button type="submit" id="sendMessage">Enviar</button>
+              <span><div id="loading" class="ocultar"></div></span></div>
+              <div id="message" class="ocultar text-center">Mensaje enviado, en breve nos pondremos en contacto para confirmar la cita.</div>
+          </div>
+          
+          <input type="hidden" name="_next" value="https://virtualvetv1b.netlify.app/">
+          <input type="hidden" name="_captcha" value="false"> 
+        </form>
+
+      </div>
+    </section><!-- End Appointment Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <!-- <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Especialidades</h2>
+          <p class="fst-italic">En VirtualVet, entendemos que tus mascotas son parte integral de tu familia, y es por eso que nos complace ofrecer una variedad de especialidades veterinarias directamente en la comodidad de tu hogar. Nuestro equipo altamente calificado está dedicado a brindar servicios especializados que abarcan desde la oftalmología, neurología y nefrología, hasta la imaginología y la ortopedia veterinaria.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Neurología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Oftalmología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nefrología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Imaginología</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-6">Ortopedia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-7">Cirugía</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>Cardiología</h3>
+                    <p class="fst-italic">Llevamos la excelencia de la cardiología veterinaria directamente a la puerta de tu hogar. Nos enorgullece ofrecer servicios especializados en el cuidado del corazón de tus seres queridos peludos, sin la necesidad de salir de casa. Nuestro equipo de cardiólogos veterinarios altamente capacitados está comprometido a proporcionar diagnósticos precisos y tratamientos compasivos para abordar las necesidades cardíacas de tus mascotas. Desde la detección temprana hasta la gestión de condiciones cardíacas crónicas, estamos aquí para brindar atención personalizada y de calidad. Descubre la tranquilidad de saber que la salud cardíaca de tu mascota está en manos expertas, sin tener que salir de la comodidad de tu hogar.</p>
+                  </div>
+                  <div class="col-lg-3 text-center order-1 order-lg-2">
+                    <img src="assets/img/img cardiología.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="col-lg-3 text-center order-1 order-lg-2">
+                    <img src="assets/img/img cardiología2.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Neurología</h3>
+                    <p class="fst-italic">Nos enorgullece ofrecer servicios especializados de neurología veterinaria directamente en la comodidad de tu hogar. Nuestro equipo de neuroveterinarios está dedicado a abordar una variedad de desafíos neurológicos que puedan afectar a tus queridas mascotas. Desde trastornos del equilibrio hasta problemas de coordinación, nuestro enfoque integral se centra en proporcionar diagnósticos precisos y tratamientos personalizados. Al elegir VirtualVet, no solo optas por la excelencia en neurología veterinaria, sino que también eliges la conveniencia de recibir atención especializada sin salir de casa. Estamos comprometidos a mejorar la calidad de vida de tus mascotas, brindándoles el cuidado neurológico que merecen, en el entorno familiar que aman.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/img neurología.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Oftalmología</h3>
+                    <p class="fst-italic"> La excelencia en oftalmología veterinaria llega directamente a la puerta de tu hogar. Ofrecemos servicios especializados en el cuidado ocular de tus adoradas mascotas, eliminando la necesidad de desplazamientos innecesarios. Nuestro equipo de oftalmólogos veterinarios altamente calificados se dedica a evaluar y tratar una amplia gama de condiciones oculares, desde problemas de visión hasta enfermedades oculares crónicas. Con diagnósticos precisos y tratamientos personalizados, estamos comprometidos a preservar y mejorar la salud ocular de tus amigos peludos.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/img oftalmología.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Nefrología</h3>
+                    <p class="fst-italic">Especializados en el cuidado de los riñones de tus seres queridos peludos, nuestro equipo de nefrólogos veterinarios altamente capacitados está comprometido a proporcionar diagnósticos precisos y tratamientos compasivos para abordar diversas condiciones renales. Desde la gestión de enfermedades renales crónicas hasta la evaluación y el tratamiento de problemas urinarios, estamos aquí para ofrecer atención especializada adaptada a las necesidades individuales de cada mascota.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/img nefrología.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>Imaginología</h3>
+                    <p class="fst-italic">Utilizamos tecnología avanzada para realizar diagnósticos precisos y no invasivos, permitiéndonos obtener imágenes detalladas de la salud interna de tus adoradas mascotas. Desde radiografías hasta ecografías, nuestro enfoque se centra en proporcionar información visual clave para evaluar la salud y el bienestar de tus compañeros peludos.</p>                    
+                  </div>
+                  <div class="col-lg-3 text-center order-1 order-lg-2">
+                    <img src="assets/img/img radiografía.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="col-lg-3 text-center order-1 order-lg-2">
+                    <img src="assets/img/img ecografía.png" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-6">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>Ortopedia</h3>
+                    <p class="fst-italic">Nuestro equipo de ortopedistas veterinarios altamente capacitados está dedicado a proporcionar diagnósticos precisos y tratamientos personalizados para abordar una variedad de condiciones musculoesqueléticas en tus mascotas. Desde la evaluación de problemas de movilidad hasta la atención de lesiones y fracturas ortopédicas.</p>                    
+                  </div>
+                  <div class="col-lg-3 text-center order-1 order-lg-2">
+                    <img src="assets/img/img ortopedia.png" alt="" class="img-fluid">
+                  </div>                  
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-7">
+                <div class="row gy-4">
+                  <div class="col-lg-6 details order-2 order-lg-1">
+                    <h3>Cirugía</h3>
+                    <p class="fst-italic">Nuestros cirujanos veterinarios altamente calificados está dedicado a brindar atención quirúrgica experta y compasiva para tus seres queridos peludos. Ya sea que tu mascota requiera una cirugía de rutina o un procedimiento más complejo, estamos equipados con la experiencia y la tecnología necesarias para garantizar la mejor atención posible.</p>                    
+                  </div>
+                  <div class="col-lg-3 text-center order-1 order-lg-2">
+                    <img src="assets/img/img cirugía.png" alt="" class="img-fluid">
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- ======= Doctors Section ======= -->
+    <!-- <section id="doctors" class="doctors">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Médicos</h2>
+          <p>Contamos con un equipo de médicos y especialistas altamente calificados que están dedicados a proporcionar el más alto nivel de atención veterinaria a domicilio. Nuestro equipo está compuesto por profesionales apasionados, desde veterinarios generales hasta especialistas en áreas como cardiología, neurología, oftalmología, nefrología, imaginología, ortopedia y cirugía. Cada uno de nuestros expertos cuenta con una profunda experiencia y formación en sus respectivos campos, asegurando que tus mascotas reciban atención especializada y compasiva.         
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Medical Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Anesthesiologist</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>Cardiology</span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Neurosurgeon</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div> 
+    </section> -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Preguntas Frecuentes: Respuestas Directas para tu Tranquilidad</h2>
+          <p>¡Bienvenido a nuestro centro de preguntas frecuentes! Aquí encontrarás respuestas directas a las inquietudes más comunes sobre nuestros servicios veterinarios a domicilio. Si tienes preguntas específicas que no encuentras aquí, no dudes en contactarnos. Estamos aquí para brindarte información clara y ayudarte a sentirte completamente seguro con la atención que ofrecemos a tus mascotas.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">¿Qué servicios veterinarios ofrecen a domicilio? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Ofrecemos una amplia gama de servicios, incluyendo consultas de rutina, vacunación, diagnóstico y tratamiento de enfermedades, cirugías, servicios especializados como cardiología, neurología. Además servicios de baño y peluquería, paseos y guardería, todo desde la comodidad de tu hogar.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">¿Cómo programo una cita para servicios veterinarios a domicilio? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Puedes programar una cita a través de nuestro<a style="display: inline;" href="https://wa.me/573008886725" target="_blank">WhatsApp</a>o a través de nuestro sitio web <a style="display: inline;" href="https://virtualvetv1b.netlify.app/">VirtualVet</a> donde encontrarás un formulario de programación de citas.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">¿Cuál es la ventaja de recibir servicios veterinarios en casa en lugar de ir a una clínica? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  La principal ventaja es la comodidad para ti y tu mascota. Evitas el estrés de los desplazamientos, y tus mascotas pueden recibir atención en un entorno familiar, lo que a menudo reduce la ansiedad.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">¿Cómo puedo pagar por los servicios veterinarios a domicilio? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Aceptamos pagos en efectivo y transferencias bancarias. El pago se realiza al finalizar la consulta o servicio.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">¿Cuál es el alcance geográfico de sus servicios a domicilio? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Ofrecemos servicios en toda el área metropolitana de Medellín y Oriente cercano. Estamos trabajando para ampliar nuestra cobertura a otras ciudades principales. Si tienes dudas sobre si cubrimos tu zona, no dudes en contactarnos para obtener información específica.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">¿Qué debo hacer en caso de una emergencia veterinaria fuera de su horario comercial? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  En caso de emergencia fuera del horario comercial, te recomendamos contactar o acudir a la clínica de emergencias veterinarias más cercana para recibir asistencia inmediata.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="600">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7" class="collapsed">¿Cómo puedo obtener registros médicos de mis mascotas después de una consulta?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Te proporcionaremos una copia de los registros médicos de tus mascotas después de cada consulta. También puedes solicitarlos vía<a style="display: inline;" href="https://wa.me/573008886725" target="_blank">WhatsApp</a> o enviándonos un mensaje al correo electrónico <a style="display: inline;" target="_blank" href="mailto:virtualvet@gmail.com">virtualvet@gmail.com</a>
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="700">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-8" class="collapsed">¿Cuáles son los costos aproximados de sus servicios?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-8" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Los costos varían según el servicio y la ubicación. Te proporcionaremos un presupuesto detallado antes de comenzar cualquier tratamiento o procedimiento.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/Diseño sin título(1).png" class="testimonial-img" alt="">
+                  <h3>Clara Hinestroza</h3>
+                  <h4>Independiente</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Estoy encantada con los servicios de VirtualVet. La veterinaria a domicilio hizo que la visita sea muy relajada para mi gato nervioso. Fue profesional, amable y respondió todas mis preguntas, sin duda seguiré utilizando sus servicios
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/Diseño sin título(2).png" class="testimonial-img" alt="">
+                  <h3>Sara Guzmán</h3>
+                  <h4>Diseñadora</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Muy buena experiencia con ustedes. El médico especialista en ortopedia trató a mi perro con cuidado y habilidad. La comodidad de recibir el tratamiento en casa fue un alivio. Recomiendo altamente sus servicios
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide" id="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/Diseño sin título(3).png" class="testimonial-img" alt="">
+                  <h3>Milena López</h3>
+                  <h4>Comerciante</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Nuestro perro tiene problemas renales y VirtualVet ha sido fundamental. El especialista no solo es experto en su campo, sino que también nos ha guiado sobre cómo cuidar mejor de nuestra mascota en casa. Estamos agradecidos por su atención y apoyo continuo.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/Diseño sin título(4).png" class="testimonial-img" alt="">
+                  <h3>Pedro Areiza</h3>
+                  <h4>Programador</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Mi trabajo me mantiene ocupado, pero gracias al paseador de virtualvet, mi perro sigue recibiendo su dosis diaria de ejercicio y diversión. Es confiable, puntual y realmente se preocupa por el bienestar de mi mascota.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/Diseño sin título(5).png" class="testimonial-img" alt="">
+                  <h3>Gloria Arango</h3>
+                  <h4>Estudiante</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Que buena experiencia en la peluquería canina. Mi perro nunca había lucido tan bien. El peluquero fue amable y atento a las necesidades específicas de mi mascota. Seguiremos utilizando el servicio a domicilio para futuros cuidados de belleza.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <!-- <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Memorias</h2>
+          <h3>Explora Nuestra Galería de Fotos: Un Vistazo a la Felicidad de las Mascotas</h3>
+          <p>Bienvenido a la galería de fotos, donde las sonrisas y alegrías de nuestras adorables mascotas cobran vida. Capturamos momentos especiales de cuidado, diversión y amistad, ofreciéndote una visión única de cómo hacemos que la experiencia veterinaria sea memorable. Desde gatos relajándose durante un examen hasta perros disfrutando de su tiempo de juego, nuestra galería refleja el amor y la atención dedicados a cada uno de nuestros pacientes. Únete a nosotros en este viaje visual y descubre cómo transformamos cada visita en una experiencia positiva y reconfortante para tus fieles amigos peludos.</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="galelry-lightbox">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Conéctate con Nosotros</h2>
+          <p>En VirtualVet, estamos siempre a tu disposición para responder a tus preguntas, programar citas y brindarte el mejor servicio posible para tus mascotas. Puedes contactarnos de diversas maneras:</p>
+        </div>
+      </div>      
+
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-5">
+            <div class="info">
+
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Locación:</h4>
+                <p>Medellín, Área Metropolitana - Oriente Cercano</p>
+              </div>
+
+              <!-- <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p><a href="mailto:virtualvet@gmail.com">virtualvet@gmail.com</a></p>
+              </div> -->
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>WhatsApp:</h4>
+                <p><a href="https://wa.me/573008886725" class="whatsapp" target="_blank">573226464344</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0">
+            <form action="https://formsubmit.co/f20b23daa80c2760a7b74656a054d79d" method="post" role="form" class="php-email-form-control">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" required>
+                  <div class="validate"></div>
+                </div>             
+                
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Tu Correo Electrónico" required>
+                  <div class="validate"></div>
+                </div>
+              </div>
+
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+                  <div class="validate"></div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                  <div class="validate"></div>
+                </div>             
+                          
+              <div class="mb-3">
+                <div class="text-center"><button type="submit" id="enviarMsn">Enviar Mensaje</button><span><div id="loader" class="block"></div></span>
+                </div>
+                  <div id="msn" class="block text-center">Mensaje enviado, en breve nos pondremos en contacto. Gracias.
+                  </div>
+              </div>
+              
+              <input type="hidden" name="_next" value="https://virtualvetv1b.netlify.app/">
+              <input type="hidden" name="_captcha" value="false"> 
+            </form>       
+               
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>VirtualVet</h3>
+            <p>
+              Medellín, Colombia <br><br>
+             
+              <strong>Teléfono:</strong> +57 3226464344<br>
+              <!-- <strong>Email:</strong> virtual@gmail.com<br> -->
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#why-us">Acerca de</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Servicios</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#departments">Especialidades</a></li> -->
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#doctors">médicos</a></li> -->
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Términos del servicio</a></li> -->
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Política de privacidad</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Servicios</h4>
+            <p>Todos nuestros servicios son a domicilio</p>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i>Consulta Veterinaria</li>
+              <li><i class="bx bx-chevron-right"></i>Servicio de Auxiliares Veterinarios</li>
+              <li><i class="bx bx-chevron-right"></i>Peluquería Canina</li>
+              <li><i class="bx bx-chevron-right"></i>Paseador Canino</li>              
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" id="suscribete">
+            <h4>Suscríbase a nuestro boletín</h4>
+            <p>¡Bienvenido a nuestra comunidad! Suscribirte a nuestro boletín es tu pasaporte a un mundo de consejos expertos, noticias emocionantes y ofertas exclusivas para el cuidado de tus mascotas. </p>
+            <form action="https://formsubmit.co/f20b23daa80c2760a7b74656a054d79d" method="post" role="form" class="suscribe">
+              <input type="email" name="email-suscripción" placeholder="Correo Electrónico" autocomplete="email" required><input type="submit" value="Suscríbete" id="enviarSuscripcion"> 
+              
+              <input type="hidden" name="_next" value="https://virtualvetv1b.netlify.app/">
+              <input type="hidden" name="_captcha" value="false">               
+            </form>           
+            <div id="msnSuscribe" class="bloquear text-center">Gracias por la suscripción</div>
+            
+            <!-- Espacio para el loader -->
+            <div id="loaderCat" class="bloquear">
+              <div class="wrapper">
+                <div class="catContainer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 733 673"
+                    class="catbody"
+                  >
+                    <path
+                      fill="#212121"
+                      d="M111.002 139.5C270.502 -24.5001 471.503 2.4997 621.002 139.5C770.501 276.5 768.504 627.5 621.002 649.5C473.5 671.5 246 687.5 111.002 649.5C-23.9964 611.5 -48.4982 303.5 111.002 139.5Z"
+                    ></path>
+                    <path fill="#212121" d="M184 9L270.603 159H97.3975L184 9Z"></path>
+                    <path fill="#212121" d="M541 0L627.603 150H454.397L541 0Z"></path>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 158 564"
+                    class="tail"
+                  >
+                    <path
+                      fill="#191919"
+                      d="M5.97602 76.066C-11.1099 41.6747 12.9018 0 51.3036 0V0C71.5336 0 89.8636 12.2558 97.2565 31.0866C173.697 225.792 180.478 345.852 97.0691 536.666C89.7636 553.378 73.0672 564 54.8273 564V564C16.9427 564 -5.4224 521.149 13.0712 488.085C90.2225 350.15 87.9612 241.089 5.97602 76.066Z"
+                    ></path>
+                  </svg>
+                  <div class="text">
+                    <span class="bigzzz">Z</span>
+                    <span class="zzz">Z</span>
+                  </div>
+                </div>
+                <div class="wallContainer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 500 126"
+                    class="wall"
+                  >
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="3"
+                      x2="450"
+                      y1="3"
+                      x1="50"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="85"
+                      x2="400"
+                      y1="85"
+                      x1="100"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="122"
+                      x2="375"
+                      y1="122"
+                      x1="125"
+                    ></line>
+                    <line stroke-width="6" stroke="#7C7C7C" y2="43" x2="500" y1="43"></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="1.99391"
+                      x2="115.5"
+                      y1="43.0061"
+                      x1="115.5"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="2.00002"
+                      x2="189"
+                      y1="43.0122"
+                      x1="189"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="2.00612"
+                      x2="262.5"
+                      y1="43.0183"
+                      x1="262.5"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="2.01222"
+                      x2="336"
+                      y1="43.0244"
+                      x1="336"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="2.01833"
+                      x2="409.5"
+                      y1="43.0305"
+                      x1="409.5"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="43"
+                      x2="153"
+                      y1="84.0122"
+                      x1="153"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="43"
+                      x2="228"
+                      y1="84.0122"
+                      x1="228"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="43"
+                      x2="303"
+                      y1="84.0122"
+                      x1="303"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="43"
+                      x2="378"
+                      y1="84.0122"
+                      x1="378"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="84"
+                      x2="192"
+                      y1="125.012"
+                      x1="192"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="84"
+                      x2="267"
+                      y1="125.012"
+                      x1="267"
+                    ></line>
+                    <line
+                      stroke-width="6"
+                      stroke="#7C7C7C"
+                      y2="84"
+                      x2="342"
+                      y1="125.012"
+                      x1="342"
+                    ></line>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>VirtualVet</span></strong>. Todos los derechos reservados
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+          Diseñado por <a href="https://virtualvetv1b.netlify.app/">VirtualVet</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        
+        <a href="https://web.facebook.com/profile.php?id=100078608133297" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/veterinario__virtual/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://wa.me/573226464344" class="whatsapp" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+
+        
+        
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>  
+  <script src="../forms/loading.js"></script>  
+  
+ 
+
 </body>
+
 </html>
+
+
+

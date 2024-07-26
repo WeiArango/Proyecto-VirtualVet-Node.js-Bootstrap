@@ -15,12 +15,12 @@
         <div class="form-container">
             <h1>Iniciar Sesión</h1>
             <p>Usuario y Contraseña para ingresar al área de administración</p>
-            <form id="login-form">
+            <form id="login-form" action="/validar" method="post">
                 <label for="name" class="sr-only">User</label>
                 <input type="text" name="name" id="name" placeholder="Nombre de usuario" required>
                 <label for="contraseña" class="sr-only">Password</label>
                 <input type="password" name="password" id="password" placeholder="Contraseña" required>
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit" value="login">Iniciar sesión</button>
                 <p class="error escondido">Usuario o Contraseña incorrectos</p>
             </form>
             <p>¿Todavía no tienes una cuenta? - <a href="/register">Registrar</a></p>

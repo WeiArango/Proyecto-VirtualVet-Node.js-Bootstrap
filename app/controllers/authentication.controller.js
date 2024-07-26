@@ -32,7 +32,7 @@ async function login(req, res) {
     if(!loginCorrecto) {
         return res.status(400).send({status:"Error", message: "Error durante login"})
     }
-   const token = JsonWebTokenError.sign(
+    const token = JsonWebTokenError.sign(
     {name:usuarioValidar.name}, 
     process.env.JWT_SECRET, 
     {expiresIn:process.env.JWT_EXPIRATION});
@@ -57,7 +57,7 @@ async function register (req, res) {
     if (!name || !email || !phone || !adress || !password) {
         return res.status(400).send({status:"Error", message: "Por favor digite todos los campos"});        
     }
-    //Para verificar que el usuario ingresado si exista
+    //Para verificar que el usuario ingresado no exista en la base de datos
     const usuarioValidar = usuarios.find(usuario => usuario.name === name);
     if (usuarioValidar) {
         return res.status(400).send({status: "Error", message: "Este usuario ya existe"});

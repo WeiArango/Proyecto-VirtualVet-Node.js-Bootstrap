@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Para poder cargar las hojas de estilo, debemos escribir en mi servidor (index.js) el código que se necesita para que todo lo que esté adentro de la carpeta public se pueda acceder como archivos estáticos (osea que se sirven así tal cual como están sin ninguna modificación)  -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="style.css">    
     <script src="register.js" defer></script>
+    <script src="index.js" defer></script>
     <title>Registro de Usuario</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div class="form-container">
             <h1>Crear cuenta</h1>
             <p>Crea tu cuenta para ingresar al área de administración</p>
-            <form id="register-form">
+            <form id="register-form" action="/validar" method="post">
                 <label for="name" class="sr-only">User</label>
                 <input type="text" name="name" id="name" placeholder="Nombre de usuario" required>
                 <label for="email" class="sr-only">Email</label>
@@ -26,7 +26,16 @@
                 <input type="text" name="adress" id="adress" placeholder="Direccion" required>
                 <label for="contraseña" class="sr-only">Password</label>
                 <input type="password" name="password" id="password" placeholder="Contraseña" required>
-                <button type="submit">Registrar</button>
+                <label for="tipo_de_usuario" class="sr-only">Tipo de usuario</label>
+                
+                <select name="tipoUsuario">
+                    <option value="Usuario">Usuario</option>
+                    <option value="Médico Veterinario">Médico Veterinario</option>
+                    <option value="Auxiliar Veterinario">Auxiliar Veterinario</option>
+                    <option value="Estilista de Mascotas">Estilista de Mascotas</option>
+                    <option value="Paseador Canino">Paseador Canino</option>
+                </select>
+                <button type="submit" value="registrar">Registrar</button>
                 <p class="error escondido">Error al registrar usuario.</p>
             </form>
             <p>¿Ya estás registrado? - <a href="/">Iniciar Sesión</a></p>

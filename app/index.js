@@ -11,8 +11,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 //Importación de la autenticación
 import { methods as authentication } from "./controllers/authentication.controller.js";
 import { methods as authorization } from "./middlewares/authorization.js";
-// Importar Bootstrap CSS
-
+import mysql from "mysql";
 
 /*====PARA EJECUTAR EL NODEMON ESCRIBIMOS EN LA CONSOLA npm run dev====*/
 
@@ -33,9 +32,17 @@ app.use(morgan("dev"));//Para mostrar las res en consola
 app.get("/", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/pages/login.html"));
 app.get("/register", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/pages/register.html"));
 app.get("/admin", authorization.soloAdmin, (req, res) => res.sendFile(__dirname + "/pages/admin/admin.html"));
-app.get("/homepage", (req, res) => res.sendFile(__dirname + "/pages/homepage.html"))
+app.get("/homepage", authorization.soloPublico, (req, res) => res.sendFile(__dirname + "/pages/homepage.html"))
+
 app.post("/api/login", authentication.login);
 app.post("/api/register", authentication.register);
+
+
+
+ 
+
+
+
 
 
 
